@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{ Component } from 'react';
+import Nav from './components/NavBar/NavBar';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/lab/Slider';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const styles = theme =>({
+  sliderContainer:{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '300px',
+  },
+  root: {
+    width: 300,
+  },
+  slider: {
+    padding: '22px 0px',
+  },
+ 
+})
+
+class App extends Component{
+  state = {
+    value: 50,
+  };
+
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+  render(){
+    const { classes } = this.props;
+    const { value } = this.state;
+    return (
+      <>
+        <Nav/>
+        <div className={classes.sliderContainer}>
+          <div className={classes.root}>
+            <Typography id="label">Amount Slider</Typography>
+            <Slider
+              className={classes.slider}
+              value={value}
+              aria-labelledby="label"
+              onChange={this.handleChange}
+            />
+             <Typography id="label">Month Slider </Typography>
+            <Slider
+              className={classes.slider}
+              value={value}
+              aria-labelledby="label"
+              onChange={this.handleChange}
+            />
+          </div>
+        </div>
+      </>
+    );
+ }
 }
 
-export default App;
+export default  withStyles(styles)(App);
