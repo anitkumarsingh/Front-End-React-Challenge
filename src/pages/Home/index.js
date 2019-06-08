@@ -28,15 +28,17 @@ class Home extends React.Component{
     constructor(props) {
     super(props);
     this.state = {
-      AmtValue: 500,
-      MnthValue:6
+      AmtValue: 900,
+      MnthValue:7
     };
   }
   componentDidMount() {
-      this.props.dispatch(actions.getData());
+      this.props.dispatch(actions.getData(Math.ceil(this.state.AmtValue),this.state.MnthValue));
     }
+   
   handleAmtChange = (event, AmtValue) => {
       this.setState({ AmtValue});
+      this.componentDidMount();
     };
   handleMnthChange = (event, MnthValue) => {
       this.setState({ MnthValue});
@@ -62,6 +64,7 @@ class Home extends React.Component{
                             value={AmtValue}
                             min={500}
                             max={5000}
+                            step={1}
                             aria-labelledby="label"
                             onChange={this.handleAmtChange}
                           />
