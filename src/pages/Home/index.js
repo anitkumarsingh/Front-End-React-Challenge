@@ -4,6 +4,7 @@ import * as actions from './redux/actions';
 import * as selectors from './redux/reducer';
 import { withStyles,Typography,Grid } from '@material-ui/core';
 import Slider from '@material-ui/lab/Slider';
+import Cards from '../../components/Card/Cards';
 import Loader from '../../components/Loader/Loader';
 
 const styles = theme =>({
@@ -28,8 +29,8 @@ class Home extends React.Component{
     constructor(props) {
     super(props);
     this.state = {
-      AmtValue: 900,
-      MnthValue:7
+      AmtValue: 500,
+      MnthValue:6
     };
   }
   componentDidMount() {
@@ -88,6 +89,7 @@ class Home extends React.Component{
                   </Grid>
                 </Grid>
               </div>
+              <Cards payments={payments}/>
             </>
         )
       }
