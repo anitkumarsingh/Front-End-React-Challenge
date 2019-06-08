@@ -26,7 +26,7 @@ export default withStyles(styles)(({ classes }) =>{
       <AppBar position="static" className={classes.appContainer}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-           FullThrottleLabs Front End React Challenge
+           FullThrottle Labs Front End React Challenge
           </Typography>
         </Toolbar>
       </AppBar>

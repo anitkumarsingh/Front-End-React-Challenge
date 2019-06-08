@@ -1,8 +1,7 @@
 import React,{ Component } from 'react';
 import Nav from './components/NavBar/NavBar';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { withStyles,Typography,Grid } from '@material-ui/core';
 import Slider from '@material-ui/lab/Slider';
 
 const styles = theme =>({
@@ -11,9 +10,12 @@ const styles = theme =>({
     justifyContent: 'center',
     alignItems: 'center',
     height: '300px',
+    marginLeft:'auto',
+    marginRight:'auto',
+    width:'70%'
   },
   root: {
-    width: 300,
+    width: 400,
   },
   slider: {
     padding: '22px 0px',
@@ -23,39 +25,63 @@ const styles = theme =>({
 
 class App extends Component{
   state = {
-    value: 50,
+    AmtValue: 500,
+    MnthValue:6
   };
 
-  handleChange = (event, value) => {
-    this.setState({ value });
+  handleAmtChange = (event, AmtValue) => {
+    this.setState({ AmtValue});
+  };
+  handleMnthChange = (event, MnthValue) => {
+    this.setState({ MnthValue});
   };
   render(){
     const { classes } = this.props;
-    const { value } = this.state;
+    const { MnthValue, AmtValue} = this.state;
     return (
       <>
         <Nav/>
-        <div className={classes.sliderContainer}>
-          <div className={classes.root}>
-            <Typography id="label">Amount Slider</Typography>
-            <Slider
-              className={classes.slider}
-              value={value}
-              aria-labelledby="label"
-              onChange={this.handleChange}
-            />
-             <Typography id="label">Month Slider </Typography>
-            <Slider
-              className={classes.slider}
-              value={value}
-              aria-labelledby="label"
-              onChange={this.handleChange}
-            />
-          </div>
-        </div>
+          <div className={classes.sliderContainer}>
+              <Grid container direction="row" justify="space-around" 
+                    alignItems="center"
+                    >
+                <Grid item lg={6}>
+                    <div className={classes.root}>
+                        <Typography id="label">Amount Slider</Typography>
+                        <Slider
+                          className={classes.slider}
+                          value={AmtValue}
+                          min={500}
+                          max={5000}
+                          aria-labelledby="label"
+                          onChange={this.handleAmtChange}
+                        />
+                        {AmtValue}
+                    </div>
+                </Grid>
+                <Grid item lg={6}>
+                    <div className={classes.root}>
+                        <Typography id="label">Month Slider </Typography>
+                          <Slider
+                            className={classes.slider}
+                            value={MnthValue}
+                            min={6}
+                            max={12}
+                            step={1}
+                            aria-labelledby="label"
+                            onChange={this.handleMnthChange}
+                          />
+                        {MnthValue}
+                    </div>
+                </Grid>
+              </Grid>
+            </div>
       </>
     );
  }
 }
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default  withStyles(styles)(App);
