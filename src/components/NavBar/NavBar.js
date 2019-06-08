@@ -15,7 +15,8 @@ const styles = theme => ({
     },
   },
   appContainer:{
-      backgroundColor: fade('#ba68c8', 0.75)
+      backgroundColor: fade('#ba68c8', 0.75),
+      color:'white'
   }
  
 });

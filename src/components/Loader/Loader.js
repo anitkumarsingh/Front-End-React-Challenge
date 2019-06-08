@@ -56,7 +56,7 @@ class Loader extends React.Component {
     return (
       <div className={classes.loadingContainer}>
         <div className={classes.centered}>
-          <CircularProgress color="secondary" />
+          <CircularProgress color="primary" />
           <br />
           <br />
           <Typography variant="subtitle1">{loadText}</Typography>
