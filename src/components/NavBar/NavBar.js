@@ -2,7 +2,6 @@ import React from 'react';
 import {AppBar,Toolbar,Typography} from '@material-ui/core';
 import { withStyles,fade } from '@material-ui/core/styles';
 
-
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -26,8 +25,15 @@ export default withStyles(styles)(({ classes }) =>{
     <div className={classes.root}>
       <AppBar position="static" className={classes.appContainer}>
         <Toolbar>
+          <img
+            src="/images/logo-2.png"
+            alt="Full throttle"
+            width={135}
+            height={45}
+          />
+           <div className="flex-grow" />
           <Typography className={classes.title} variant="h6" noWrap>
-           FullThrottle Labs Front End React Challenge
+            Front End React Challenge
           </Typography>
         </Toolbar>
       </AppBar>

@@ -86,7 +86,7 @@ const flex = theme => ({
   '.content-center': { alignContent: 'center' },
   '.self-end': { alignSelf: 'flex-end' },
 
-  '.flex-grow': { flexGrow: 1 },
+  '.flex-grow': { flexGrow: 5 },
 
   '.basis-50': { flexBasis: '50%' },
   '.basis-100': { flexBasis: '100%' },
