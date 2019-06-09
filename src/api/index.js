@@ -6,7 +6,6 @@ class API {
     try {
       let response = await fetch(`${API_DOMAIN}/interest?amount=${amount}&numMonths=${numMonths}`);
       let results = await response.json();
-      console.log(response);
       return results;
     } catch (error) {
       console.log(error);

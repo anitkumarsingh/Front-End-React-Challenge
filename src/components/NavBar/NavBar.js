@@ -28,8 +28,8 @@ export default withStyles(styles)(({ classes }) =>{
           <img
             src="/images/logo-2.png"
             alt="Full throttle"
-            width={135}
-            height={45}
+            width={145}
+            height={'auto'}
           />
            <div className="flex-grow" />
           <Typography className={classes.title} variant="h6" noWrap>

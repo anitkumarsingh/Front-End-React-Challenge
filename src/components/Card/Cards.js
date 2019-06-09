@@ -26,7 +26,7 @@ const styles = theme =>({
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    fontSize: '17.43px',
   },
   pos: {
     marginBottom: 12,

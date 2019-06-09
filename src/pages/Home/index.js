@@ -55,7 +55,6 @@ class Home extends React.Component{
     render(){
         const { loading,payments,classes } = this.props;
         const { MnthValue, AmtValue} = this.state;
-        console.log(payments);
         if(loading){
          return <Loader/>
         }else{
@@ -98,7 +97,7 @@ class Home extends React.Component{
                 </Grid>
               </div>
               <Cards payments={payments}/>
-            </>
+            </> // Short syntax for writing React.Fragement
         )
       }
     }

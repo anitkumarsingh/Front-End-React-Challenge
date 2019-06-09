@@ -9,7 +9,6 @@ export function getData(amount,numMonths) {
     });
     try {
       const payments = await api.getUsers(amount,numMonths);
-      console.log(payments)
       dispatch({
         type: types.LOADED,
         payments,
