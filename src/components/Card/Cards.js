@@ -9,7 +9,11 @@ const styles = theme =>({
     cardContainer:{
      width:'50%',
      marginLeft:'auto',
-     marginRight:'auto'
+     marginRight:'auto',
+     [theme.breakpoints.down('xs')]: {
+      width:'auto',
+      padding:'0 20px 0 20px'
+     },
     },
   card: {
     minWidth: 275,

@@ -19,6 +19,9 @@ const styles = theme =>({
   },
   root: {
     width: 400,
+    [theme.breakpoints.down('xs')]: {
+     width:200
+    },
   },
   slider: {
     padding: '22px 0px',
@@ -66,7 +69,7 @@ class Home extends React.Component{
                       >
                   <Grid item lg={6}>
                       <div className={classes.root}>
-                          <Typography id="label">Amount Slider</Typography>
+                          <Typography id="label" >Amount Slider</Typography>
                           <Slider
                             className={classes.slider}
                             value={AmtValue}
