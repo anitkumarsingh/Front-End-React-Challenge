@@ -1,4 +1,16 @@
-# FullThrottleLabs-FrontEnd-React
+# FullThrottle Labs-Front End React Challenge
+
+### What is this ?
+React web app that allows a user to enter a loan amount and a loan duration in months which then displays the interest rate and the monthly payment dynamically. 
+
+### [Live Demo](https://full-throttle-anit.netlify.com/)
+
+### Problem Statement
+Design and implement a user interface that allows a user to enter a loan amount and a
+loan duration in months which then displays the interest rate and the monthly payment.
+The user must be able to enter (at least) the monetary amount by using a slider. The
+calculated values should automatically update as the slider is used -without requiring any
+further interaction by the user.
 
 ### Technical skills used
 - React
@@ -13,7 +25,7 @@
 
 ## Install
 Install all required depencencies by following command \
-**npm i** \
+**npm i** 
 
 ## Available Scripts
 In the project directory, you can run **npm start** \
@@ -22,23 +34,11 @@ Open [Localhost](http://localhost:3000) to view it in the browser.
 
 
 ### Screen shots
-#### Login screen
-![](screenshots/Screenshot_2019-06-06%20Drag%20and%20Drop%20By%20Anit%20Kumar.png)
+#### Initial screen
+![](screenshots/Screenshot_2019-06-09%20Slider.png)
 
-#### When user try to access protected route without login or when session has expired
-![](screenshots/Screenshot_2019-06-06%20Drag%20and%20Drop%20By%20Anit%20Kumar(5).png)
-
-#### Initial screen of drag and drop route
-![](screenshots/Screenshot_2019-06-06%20Drag%20and%20Drop%20By%20Anit%20Kumar(1).png)
-
-#### After drag and drop some permission 
-![](screenshots/Screenshot_2019-06-06%20Drag%20and%20Drop%20By%20Anit%20Kumar(2).png)
-
-#### On successful login user will lands to this screen
-![](screenshots/Screenshot_2019-06-06%20Drag%20and%20Drop%20By%20Anit%20Kumar(3).png)
-
-#### Search, pagination and Sort feature
-![](screenshots/Screenshot_2019-06-06%20Drag%20and%20Drop%20By%20Anit%20Kumar(4).png)
+#### When user changes amount value or month using slider
+![](screenshots/Screenshot_2019-06-09%20Slider(1).png)
 
 
 #### @ Anit Kumar, 2019  :blush:
