@@ -37,12 +37,20 @@ class Home extends React.Component{
       this.props.dispatch(actions.getData(Math.ceil(this.state.AmtValue),this.state.MnthValue));
     }
    
+  continousFetchAmtData = (AmtValue)=>{
+    this.props.dispatch(actions.getData(Math.ceil(AmtValue),this.state.MnthValue));
+  }
+
+  continousFetchMnthData = (MnthValue)=>{
+    this.props.dispatch(actions.getData(Math.ceil(this.state.AmtValue),MnthValue));
+  }
   handleAmtChange = (event, AmtValue) => {
       this.setState({ AmtValue});
-      this.componentDidMount();
+      this.continousFetchAmtData(AmtValue);
     };
   handleMnthChange = (event, MnthValue) => {
       this.setState({ MnthValue});
+      this.continousFetchMnthData(MnthValue);
     };
     render(){
         const { loading,payments,classes } = this.props;
