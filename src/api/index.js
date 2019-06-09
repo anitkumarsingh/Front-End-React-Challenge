@@ -2,7 +2,7 @@
 const API_DOMAIN = 'https://ftl-frontend-test.herokuapp.com';
 class API {
   async getUsers(amount,numMonths) {
-    console.log(amount,numMonths);
+    // console.log(amount,numMonths);
     try {
       let response = await fetch(`${API_DOMAIN}/interest?amount=${amount}&numMonths=${numMonths}`);
       let results = await response.json();

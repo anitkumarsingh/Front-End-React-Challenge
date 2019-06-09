@@ -34,8 +34,7 @@ const styles = theme =>({
 });
 
 const Cards = ({ classes,payments }) =>{
-  const bull = <span className={classes.bullet}><pre>   </pre></span>;
-  console.log(payments);
+  const spacer = <span className={classes.bullet}><pre>   </pre></span>;
   return (
       <div className={classes.cardContainer}>
         <Card className={classes.card}>
@@ -45,9 +44,9 @@ const Cards = ({ classes,payments }) =>{
                 </Typography>
                 <Typography variant="h5" component="h2" className='text-center'>
                     Interest Rate : {payments.interestRate}
-                    {bull}
+                    {spacer}
                     Monthly Payment : $ {payments.monthlyPayment.amount}
-                    {bull}
+                    {spacer}
                 </Typography>
             </CardContent>
         </Card>
