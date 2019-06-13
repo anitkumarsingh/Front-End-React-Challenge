@@ -14,7 +14,7 @@ const styles = theme => ({
     },
   },
   appContainer:{
-      backgroundColor: fade('#ba68c8', 0.75),
+      backgroundColor: fade('#7f0087', 0.75),
       color:'white'
   }
  
@@ -26,9 +26,9 @@ export default withStyles(styles)(({ classes }) =>{
       <AppBar position="static" className={classes.appContainer}>
         <Toolbar>
           <img
-            src="/images/logo-2.png"
-            alt="Full throttle"
-            width={145}
+            src="/images/smiley.png"
+            alt="smiley"
+            width={45}
             height={'auto'}
           />
            <div className="flex-grow" />
