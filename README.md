@@ -35,10 +35,10 @@ Open [Localhost](http://localhost:3000) to view it in the browser.
 
 ### Screen shots
 #### Initial screen
-![](screenshots/Screenshot_2019-06-09%20Slider.png)
+![](screenshots/Screenshot_2019-06-13%20Slider.png)
 
 #### When user changes amount value or month using slider
-![](screenshots/Screenshot_2019-06-09%20Slider(1).png)
+![](screenshots/Screenshot_2019-06-13%20Slider(1).png)
 
 
 #### @ Anit Kumar, 2019  :blush:
