@@ -3,7 +3,7 @@
 ### What is this ?
 React web app that allows a user to enter a loan amount and a loan duration in months which then displays the interest rate and the monthly payment dynamically. 
 
-### [Live Demo](https://full-throttle-anit.netlify.com/)
+### [Live Demo](https://front-end-challenge-slider.netlify.com/)
 
 ### Problem Statement
 Design and implement a user interface that allows a user to enter a loan amount and a
